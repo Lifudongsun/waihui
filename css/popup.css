@@ -1,0 +1,559 @@
+.bgc2b60ab {
+    background-color: #004098!important;
+    color: #fff!important;
+}
+
+.bgc8dadd4 {
+    background-color: #8dadd4!important;
+    color: #fff!important;
+}
+
+.main-content {
+    width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    font-size: 12px;
+    color: #6a696f;
+    line-height: 30px;
+}
+
+.job-name p {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #2a2937;
+}
+
+.icon-star {
+    display: inline-block;
+    width: 25px;
+    height: 22px;
+    margin-left: 5px;
+    background: url("../images/starC.png") no-repeat center;
+    vertical-align: top;
+}
+
+.job-name-top {
+    margin-top: 10px;
+}
+
+.basicInfo {
+    display: inline-block;
+    width: 160px;
+}
+
+.basicInfo:last-child {
+    width: auto;
+}
+
+.basicInfo b {
+    font-weight: 100;
+    display: inline-block;
+}
+
+.basicInfoL {
+    text-align: right;
+    width: 60px;
+}
+
+.title {
+    font-size: 16px;
+    color: #004098;
+    margin-top: 20px;
+}
+
+.btn .btn-apply a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #fff;
+}
+
+.button {
+    width: 130px;
+    height: 40px;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: text-bottom;
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    color: #fff;
+    border-color: #62b503;
+    background-color: #62b503;
+    border: 1px solid;
+    border-radius: 3px;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button>span {
+    vertical-align: middle;
+}
+
+.login-main {
+    font-size: 12px;
+    border-radius: 4px;
+    background: #fff;
+    text-align: center;
+    padding: 30px 0 20px;
+}
+
+.login-page input,
+.findPass input {
+    width: 320px;
+    height: 44px;
+    padding-left: 10px;
+    margin-top: 25px;
+    border: 1px solid #efefef;
+    background-color: #efefef;
+    color: #555560;
+    border-radius: 3px;
+    outline: none;
+}
+
+.login-page {
+    height: 264px
+}
+
+.login-page button {
+    width: 332px;
+    height: 44px;
+    margin: 30px 0 0;
+    font-size: 16px;
+    background-color: #004098;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+    outline: none;
+}
+
+.login-foot {
+    width: 320px;
+    margin: 30px auto 0;
+    overflow: hidden;
+}
+
+.left {
+    float: left;
+    color: #2b61ab;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.right,
+.rememberPass {
+    float: right;
+    color: #2b61ab;
+    cursor: pointer;
+}
+
+.login-hook1,
+.login-hook2 {
+    position: absolute;
+    background: url("../components/layui/css/modules/layer/default/icon.png") no-repeat;
+    background-position: -98px -40px;
+    display: none;
+    width: 14px;
+    height: 14px;
+    left: 350px;
+    top: 46px;
+}
+
+.login-hook2 {
+    top: 116px;
+}
+
+.register .login-hook2-email,
+.register .login-hook2-userName,
+.register .login-hook2-pass,
+.register .login-hook2-pass2 {
+    top: 17px;
+}
+
+.passLogin {
+    position: absolute;
+    background: #fff;
+    width: 100%;
+}
+
+.errorPass,
+.noFindEmail,
+.errorCode,
+.userErrorCode,
+.userNameSet,
+.userPassSet,
+.userPassSet2,
+.errorOldPass {
+    display: none;
+    position: absolute;
+    font-size: 12px;
+    color: #2b61ab;
+    line-height: 12px;
+    text-align: right;
+    right: 60px;
+    top: 112px;
+}
+
+.errorUserName {
+    display: none;
+    position: absolute;
+    font-size: 12px;
+    color: #2b61ab;
+    line-height: 12px;
+    text-align: right;
+    right: 60px;
+    top: 42px;
+}
+
+.errorCode {
+    top: 190px;
+    right: 160px;
+}
+
+.userErrorCode {
+    top: 168px;
+    right: 160px;
+}
+
+
+/*注册部分*/
+
+.register {
+    padding-top: 10px;
+}
+
+.registerDemo {
+    height: 68px;
+    position: relative;
+}
+
+.register input {
+    width: 320px;
+    height: 35px;
+    padding-left: 10px;
+    border: 1px solid #efefef;
+    background-color: #efefef;
+    color: #555560;
+    border-radius: 3px;
+    outline: none;
+    margin: 0;
+}
+
+.register .noFindEmail,
+.register .userNameSet,
+.register .userPassSet,
+.register .userPassSet2,
+.register .errorCode,
+.findPass .noFindEmail,
+.findPass .userErrorCode,
+.findPass .errorPass,
+.findPass .errorOldPass {
+    text-align: left;
+    left: 55px;
+    right: 50px;
+}
+
+.register .noFindEmail,
+.register .userNameSet,
+.register .userPassSet,
+.register .userPassSet2,
+.register .errorCode {
+    display: block !important;
+    position: inherit;
+    padding: 10px 0 10px 50px;
+    height: 12px;
+}
+
+.register button {
+    width: 330px;
+    height: 40px;
+    background-color: #e0e0e0;
+    color: #2a2a38;
+    border: 0;
+    border-radius: 3px;
+    outline: none;
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+.register .login-foot {
+    width: 320px;
+    margin: 18px auto 0;
+    overflow: hidden;
+}
+
+
+/*找回密码部分*/
+
+.findPass .noFindEmail {
+    width: 110px;
+    top: 138px;
+    left: 260px;
+}
+
+.findPass .errorPass {
+    top: 190px;
+    left: 280px;
+}
+
+.findPass .userErrorCode {
+    top: 227px;
+}
+
+.findPass .errorOldPass {
+    top: 105px;
+}
+
+.register .captchaInput,
+.findPass .userInput {
+    width: 218px;
+}
+
+.captchaImg {
+    display: inline-block;
+    width: 90px;
+    height: 44px;
+    margin-left: 8px;
+    background-color: #efefef;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+    position: relative;
+    vertical-align: bottom;
+}
+
+.captchaImg img {
+    width: 58px;
+    height: 24px;
+    margin-top: 10px;
+}
+
+.goRight {
+    display: inline-block;
+    margin-left: 3px;
+    width: 0;
+    height: 0;
+    border: 6px solid #2b61ab;
+    border-right: 0;
+    border-top: 5px solid #fff!important;
+    border-bottom: 5px solid #fff!important;
+}
+
+.register-btn {
+    width: 330px;
+    height: 44px;
+    margin-top: 30px;
+    background-color: #e0e0e0;
+    color: #2a2a38;
+    border: 0;
+    border-radius: 3px;
+    margin-left: 0;
+}
+
+.button--winonaa::after {
+    top: 5px;
+}
+
+.goOutHint {
+    margin: 0;
+    font-size: 18px;
+    color: #2a2a38;
+}
+
+.changePassHint {
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    color: #2a2a38;
+    margin: 0;
+}
+
+.setNewPass {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2b60ab;
+    line-height: 40px;
+    margin: 20px 0 0;
+}
+
+.hintEmail {
+    margin: 0 0 16px;
+}
+
+.changePassSpan {
+    font-size: 14px;
+    color: #2b60ab;
+}
+
+.layui-input-block .layui-form-radio i {
+    font-size: 16px;
+}
+
+.layui-input-block .layui-form-radio i:hover,
+.layui-input-block .layui-form-radioed i {
+    color: #2b60ab;
+}
+
+.chooseType {
+    font-size: 18px;
+    color: #2a2a38;
+    line-height: 40px;
+}
+
+.chooseTypeHint {
+    font-size: 12px;
+    color: #a1a1a5;
+    line-height: 24px;
+}
+
+.layui-formChoose {
+    margin-top: 30px;
+    height: 60px;
+}
+
+
+/*注册成功*/
+
+.registerEmail {
+    margin: 12px 0;
+}
+
+
+/*投递成功*/
+
+.sendSuccess {
+    padding-top: 10px;
+}
+
+
+/*投递失败*/
+
+.sendLose {
+    padding-top: 10px;
+}
+
+.sendLose .btnCon {
+    margin-top: 20px;
+}
+
+.sendLose .login-logo {
+    position: relative;
+}
+
+.loseInfo {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    color: #ff9f15;
+    left: 270px;
+    top: 35px;
+}
+
+
+/*上传文件*/
+
+.uploadLabel {
+    display: block;
+    width: 160px;
+    height: 120px;
+    border: 1px dashed #d7d7d7;
+    margin: 0 auto;
+}
+
+.uploadLabel input[type=file] {
+    display: none;
+    outline: none;
+}
+
+.fillResume {
+    color: #2b60ab;
+    font-size: 14px;
+    line-height: 70px;
+    text-decoration: underline;
+}
+
+.uploadLabel img {
+    margin: 16px 0;
+}
+
+
+/*公告样式*/
+
+.journeyNotice {
+    margin: 20px 26px;
+}
+
+.journeyNotice p {
+    margin: 0;
+    line-height: 30px;
+    font-size: 16px;
+    color: #2a2a38;
+}
+
+.journeyNotice p.mt30 {
+    margin-top: 30px;
+}
+
+.journeyNoticeBtn {
+    text-align: center;
+}
+
+.textRight {
+    text-align: right;
+}
+
+.button-alive {
+    background-color: #2b60ab !important;
+    color: #fff !important;
+}
+
+.button-unalive {
+    background-color: #e0e0e0 !important;
+    color: #2a2a38 !important;
+}
+
+
+/***注册类型***/
+
+.regType {
+    text-align: left;
+    padding: 10px 45px;
+    line-height: 25px;
+}
+
+.regType span {
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.regType ul {
+    display: inline-block;
+    padding-top: 10px;
+}
+
+.regType ul li {
+    font-size: 14px;
+    display: inline-block;
+    color: #000;
+    margin-right: 30px;
+}
+
+.regType ul li i {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -2px 5px 0 0;
+    background: url("../images/radio-bj01.png;")
+}
+
+.regType ul li i.on {
+    background: url("../images/radio-bj02.png")
+}

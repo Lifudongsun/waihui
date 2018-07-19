@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/common.css" charset="utf-8">
+    <link rel="stylesheet" href="css/index.css" charset="utf-8">
+    <link rel="stylesheet" href="components/layui/css/modules/layer/default/layer.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <script src="js/jquery.min.js" charset="utf-8"></script>
+    <script src="components/layui/layui.js"></script>
+    <script src="js/popup.js"></script>
+    <!-- <script src="js/mpopup.js"></script> -->
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-logo"><img src="images/logo.png" alt="" /></div>
+        <div class="header-menu">
+            <ul>
+                <li><a class="hover" href="index.html">首页</a></li>
+                <li><a href="aboutus/aboutus.html">关于我们</a></li>
+                <li><a href="news/news.html">新闻动态</a></li>
+                <li><a href="social/social.html">社会招聘</a>
+                    <ul class="menuTwo">
+                        <li><a href="social/socialstation.html">招聘岗位</a></li>
+                        <li><a href="social/socialflow.html">招聘流程</a></li>
+                        <li><a href="social/socialquestion.html">常见问题</a></li>
+                    </ul>
+                </li>
+                <li><a href="campus/campus.html">校园招聘</a>
+                    <ul class="menuTwo">
+                        <li><a href="campus/campusstation.html">招聘岗位</a></li>
+                        <li><a href="campus/campusflow.html">招聘流程</a></li>
+                        <li><a href="campus/campusquestion.html">常见问题</a></li>
+                    </ul>
+                </li>
+                <li><a href="talent/talent.html">人才库</a></li>
+            </ul>
+        </div>
+        <div class="header-login">
+            <a id="loginShow">登录</a>
+            <a href="">|</a>
+            <a id="registerShow">注册</a>
+        </div>
+    </div>
+    <div class="index-banner">
+        <ul class="slider-main">
+            <li class="slider-panel">
+                <div class="slider-contain">
+                    <p class="ff" style="color: #004098;">我们的团队</p>
+                    <p class="ft" style="color: #004098;">专业化、国际化、多元化</p>
+                </div>
+            </li>
+            <li class="slider-panel">
+                <div class="slider-contain">
+                    <p class="ff">我们的使命</p>
+                    <p class="ft">实现中国国家外汇储备的安全、流动、保值、增值</p>
+                </div>
+            </li>
+            <li class="slider-panel">
+                <div class="slider-contain">
+                    <p class="ff">我们的机构</p>
+                    <p class="ft">中国国家外汇储备的经营管理机构</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">国家外汇管理局中央外汇业务中心©版</div>
+
+
+    <div id="login" style="display: none;">
+        <div class="login-main">
+            <div class="login-logo">
+                <img src="images/logo.png">
+            </div>
+            <div class="login-page">
+                <div class="passLogin img-1">
+                    <input class="userName" type="text" placeholder="请输入您的用户名" />
+                    <i class="login-hook1"></i>
+                    <input class="userPass" type="password" placeholder="请输入密码" />
+                    <span class="errorPass">密码错误</span>
+                    <button class="button button--winona" data-text="登录">
+                        <span>登录</span>
+                    </button>
+                    <div class="login-foot">
+                        <a class="left forgetPass sc-c">忘记密码?</a>
+                        <a class="right mc-c">去注册</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="register" style="display: none;">
+        <div class="login-main">
+            <div class="login-logo">
+                <img src="images/logo.png">
+            </div>
+            <div class="register">
+                <!-- <div class="regType">
+                    <span>注册类型</span>
+                    <ul>
+                        <li><i id="social_recruit" class="clz_recruita" r-val="2"></i>社会招聘</li>
+                        <li><i id="campus_recruit" class="clz_recruita" r-val="1"></i>校园招聘</li>
+                    </ul>
+                </div> -->
+                <input class="registerEmail" type="text" placeholder="请输入邮箱（可用于登录和找回密码）" />
+                <span class="noFindEmail"></span><i class="login-hook2"></i>
+                <input class="userName" type="text" placeholder="请输入用户名" />
+                <span class="userNameSet"></span><i class="login-hook2"></i>
+                <input class="userPass userPassword1" type="password" placeholder="8-20位密码，字母/数字/符号至少2种" />
+                <span class="userPassSet"></span><i class="login-hook2"></i>
+                <input class="userPass userPassword2" type="password" placeholder="请确认密码" />
+                <span class="userPassSet2"></span><i class="login-hook2"></i>
+                <input class="captchaInput" type="text" placeholder="请输入验证码" />
+                <span class="captchaImg">
+                    <img src="images/captcha.png">
+                </span>
+                <span class="errorCode"></span>
+                <button class="button button--winona" data-text="确定">
+                    <span>确定</span>
+                </button>
+                <div class="login-foot">
+                    <a class="right mc-c">想起来了，去登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="findPass" style="display: none;">
+        <div class="login-main">
+            <div class="login-logo">
+                <img src="images/logo.png">
+            </div>
+            <div class="findPass">
+                <input class="userEmail" type="text" placeholder="请输入邮箱账号" />
+                <span class="noFindEmail">请确认邮箱</span><i class="login-hook2"></i>
+                <input class="userInput" type="text" placeholder="请输验证码" />
+                <span class="userErrorCode">验证码错误</span>
+                <span class="captchaImg">
+                    <img src="images/captcha.png">
+                    </span>
+                <button class="button button--winona register-btn" data-text="密码重置">
+                    <span>密码重置</span>
+                </button>
+                <div class="login-foot">
+                    <a class="rememberPass mc-c">等等，想起来密码了<i class="goRight mc-bc"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="changePass" style="display: none;">
+        <div class="login-main">
+            <div class="login-logo" style="font-size: 16px; line-height: 42px;">
+                修改密码
+            </div>
+            <div class="login-page">
+                <div class="findPass img-1">
+                    <input class="userName" type="password" placeholder="请输新密码，8位以上" />
+                    <span class="noFindEmail">密码要在8位以上哦</span><i class="login-hook2"></i>
+                    <input class="userPass" type="password" placeholder="再次输入新密码" />
+                    <span class="errorPass">两次密码不一致</span>
+                    <button class="button button--winona" data-text="确定">
+                        <span>确定</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="goOut" style="display: none">
+        <div class="login-main">
+            <img src="images/z-goout.png">
+            <p class="goOutHint">您是要退出么？</p>
+            <button class="button button--winona button--winonaa register-btn zhuce bgc2b60ab" data-text="确定">
+                <span>确定</span>
+            </button>
+
+        </div>
+    </div>
+    <div id="changePassSu" style="display: none">
+        <div class="login-main">
+            <img src="images/z-password.png">
+            <p class="changePassHint">修改密码成功</p>
+            <span class="changePassSpan">5s后自动关闭</span>
+        </div>
+    </div>
+    <div id="findPass2" style="display: none;">
+        <div class="login-main">
+            <div class="login-logo">
+                <img src="images/logo.png">
+            </div>
+            <img style="margin-top: 20px" src="images/youxiang.png">
+            <p class="setNewPass">请前往邮箱设置新密码！</p>
+            <p class="hintEmail">lishahs@dayee.com</p>
+            <span class="changePassSpan">我知道了！</span>
+        </div>
+    </div>
+    <div id="registerSuccess" style="display: none;">
+        <div class="login-main registerSuccess">
+            <div class="login-logo">
+                <img src="images/logo.png">
+            </div>
+            <div style="width: 124px;height: 124px;border-radius: 50%;margin: 20px auto;background-color: #ecf5fd;">
+                <img style="margin-top: 22px" src="images/zhucechenggon.png">
+            </div>
+
+            <p class="setNewPass">注册成功！</p>
+            <p class="registerEmail">lishahs@dayee.com欢迎您~</p>
+            <span class="changePassSpan">5s后弹窗关闭，回到首页</span>
+        </div>
+    </div>
+
+    <!-- <div id="findPassShow2">找回密码</div>-->
+    <div id="registerSuccessShow" style="display: none;">已注册成功<br/>请去邮箱激活哦</div>
+
+
+
+</body>
+
+<script>
+    $(document).ready(function() {
+        var length,
+            currentIndex = 0,
+            interval,
+            hasStarted = false, //是否已经开始轮播
+            t = 3000; //轮播时间间隔
+        length = $('.slider-panel').length;
+        $('.slider-panel:not(:first)').hide();
+
+        function next() {
+            var preIndex = currentIndex;
+            currentIndex = ++currentIndex % length;
+            play(preIndex, currentIndex);
+        }
+
+        function play(preIndex, currentIndex) {
+            $('.slider-panel').eq(preIndex).fadeOut(300)
+                .parent().children().eq(currentIndex).fadeIn(300);
+        }
+
+        function start() {
+            if (!hasStarted) {
+                hasStarted = true;
+                interval = setInterval(next, t);
+            }
+        }
+
+        function stop() {
+            clearInterval(interval);
+            hasStarted = false;
+        }
+        start();
+
+    });
+</script>
+<script>
+    layui.use('layer', function() {
+        var $ = layui.jquery,
+            layer = layui.layer;
+        $("#loginShow").on("click", loginShow);
+        $("#registerShow").on("click", registerShow);
+        $("#findPassShow").on("click", findPassShow);
+        $("#findPassShow2").on("click", findPassShow2);
+        $("#registerSuccessShow").on("click", registerSuccessShow);
+
+    });
+</script>
+
+</html>

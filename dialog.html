@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="components/layui/css/modules/layer/default/layer.css" rel="stylesheet">
+    <link href="css/popup.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="components/layui/layui.js"></script>
+    <script src="js/popup.js"></script>
+</head>
+
+<body>
+
+
+
+    <div id="newResume">新建简历</div>
+    <div id="goOutshow">退出</div>
+    <div id="deleteResume">删除简历</div>
+    <div id="changePassShow">修改密码</div>
+
+    <div id="changePassSuShow">修改密码成功</div>
+    <div id="findPassShow2">找回密码</div>
+    <div id="registerSuccessShow">注册成功提示</div>
+    <div id="positionShow">职位详情</div>
+    <div id="tipsShow">提示信息</div>
+    <div id="deleteFavorateShow">是否取消收藏职位</div>
+    <div id="isLogin">去登录</div>
+    <div id="socialNotcampusshow">注册为社会招聘的用户不能应聘校园招聘的职位。</div>
+
+
+
+    <!-- 退出登陆 -->
+    <div id="goOut" style="display: none">
+        <div class="login-main">
+            <img src="images/z-goout.png " alt="" />
+            <p class="goOutHint">您是要退出么？</p>
+            <button class="button button--winona button--winonaa register-btn zhuce bgc2b60ab cursor" data-text="确定" onclick="javascript:logOut();">
+                <span>确定</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- 新建简历 -->
+    <div id="uploadResume" style="display: none;">
+        <div class="login-main">
+            <label class="uploadLabel" for="resumeAttachment">
+              <form id="attachmentResume" class="attachmentResume" name="attachmentResume" enctype="multipart/form-data" method="post" target="_blank">
+                 <input type="hidden" name="recruitType" id="recruitType"  />
+                 <input type="hidden" name="brandCode"  />
+                 <input type="hidden" name="userType" id="userType"/>
+                 <input type="hidden" id="lanTypeAttachment" name="lanTypeAttachment" />
+                                 
+                <input type="file" name="resumeAttachment" id="resumeAttachment" onchange="changeFile(this);" value="">
+             </form>
+             
+                <img src="images/uploadImg.png" alt=""/>
+                <!--<i class="icon iconfont" style="font-size: 62px;color: #497cba;">&#xe618;</i>-->
+                <p style="margin: 0;font-size: 12px;color: #999999;">点击图标上传简历</p>
+            </label>
+            <p style="color: #fff;line-height: 50px;" class="fileName">文件名称</p>
+            <p style="color: #b2b2b2;line-height: 50px;">可以上传html、htm、pdf、doc、docx、txt、xls、mht;</p>
+            <div>
+                <button class="button button--winona bgc8dadd4 uploadResumeNot cursor" data-text="取消">
+                    <span>取消</span>
+                </button>
+                <button class="button button--winona bgc2b60ab uploadResume cursor" data-text="上传">
+                    <span>上传</span>
+                </button>
+            </div>
+            <a class="fillResume cursor" onclick="creatNewRsume(2);">在线去填写简历</a>
+        </div>
+        <!-- 在线填写简历. -->
+        <form class="primaryResume" name="primaryResume" method="post" target="_blank">
+            <input type="hidden" id="recruitType_2" name="recruitType">
+            <input type="hidden" id="brandCode" name="brandCode">
+            <input type="hidden" id="lanType" name="lanType">
+            <input type="hidden" id="postType" name="postType">
+        </form>
+    </div>
+
+    <!-- 删除简历 -->
+    <div id="deleteResumeComfirm" style="display: none">
+        <div class="login-main">
+            <img src="images/z-goout.png" alt="" />
+            <p class="goOutHint">确定删除简历嘛？</p>
+            <button class="button button--winona button--winonaa register-btn zhuce bgc2b60ab cursor" data-text="确定" onclick="javascript:deleteResumeComfirm();">
+                    <span>确定</span>
+                </button>
+        </div>
+        <input type="hidden" class="resume-name" id="name-delete-resume" value="" />
+        <input type="hidden" class="resume-id" id="id-delete-resume" value="" />
+    </div>
+
+    <!-- 修改密码 -->
+    <div id="changePass" style="display: none;">
+        <div class="login-main">
+            <div class="login-logo" style="font-size: 16px; line-height: 42px;">
+                修改密码
+            </div>
+            <div class="login-page">
+                <div class="findPass img-1">
+                    <input class="userName" type="password" placeholder="请输新密码，8位以上" />
+                    <span class="noFindEmail">密码要在8位以上哦</span><i class="login-hook2"></i>
+                    <input class="userPass" type="password" placeholder="再次输入新密码" />
+                    <span class="errorPass">两次密码不一致</span>
+                    <button class="button button--winona" data-text="确定">
+                        <span>确定</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 修改密码成功 -->
+    <div id="changePassSu" style="display: none">
+        <div class="login-main">
+            <img src="images/z-password.png">
+            <p class="changePassHint">修改密码成功</p>
+            <span class="changePassSpan">5s后自动关闭</span>
+        </div>
+    </div>
+    <!-- 找回密码 -->
+    <div id="findPass2" style="display: none;">
+        <div class="login-main">
+            <div class="login-logo">
+                <img src="images/logo.png">
+            </div>
+            <img style="margin-top: 20px" src="images/youxiang.png">
+            <p class="setNewPass">请前往邮箱设置新密码！</p>
+            <p class="hintEmail">lishahs@dayee.com</p>
+            <span class="changePassSpan">我知道了！</span>
+        </div>
+    </div>
+    <!--注册成功 -->
+    <div id="registerSuccess" style="display: none;">
+        <div class="login-main registerSuccess">
+            <div class="login-logo">
+                <img src="images/logo.png">
+            </div>
+            <div style="width: 124px;height: 124px;border-radius: 50%;margin: 20px auto;background-color: #ecf5fd;">
+                <img style="margin-top: 22px" src="images/zhucechenggon.png">
+            </div>
+
+            <p class="setNewPass">注册成功！</p>
+            <p class="registerEmail">lishahs@dayee.com欢迎您~</p>
+            <span class="changePassSpan">5s后弹窗关闭，回到首页</span>
+        </div>
+    </div>
+    <!-- 职位 -->
+    <div id="position" style="display: none;">
+        <div class="main-content">
+            <div class="job-name">
+                <p>互联网产品部-产品经理 <i class="icon-star"></i></p>
+                <div class="job-name-top">
+                    <span class="basicInfo">
+                            <b class="basicInfoL">
+                                工作地点：
+                            </b>
+                            <b class="basicInfoR">
+                                上海
+                            </b>
+                        </span>
+                    <span class="basicInfo">
+                            <b class="basicInfoL">
+                                职位类别：
+                            </b>
+                            <b class="basicInfoR">
+                                互联网，技术类
+                            </b>
+                        </span>
+                </div>
+                <div class="job-name-bottom">
+                    <span class="basicInfo">
+                            <b class="basicInfoL">
+                                招聘人数：
+                            </b>
+                            <b class="basicInfoR">
+                                5
+                            </b>
+                        </span>
+                    <span class="basicInfo">
+                            <b class="basicInfoL">
+                                招聘机构：
+                            </b>
+                            <b class="basicInfoR">
+                                北京市得意双薪广告股份有限公司
+                            </b>
+                        </span>
+                </div>
+
+            </div>
+            <div class="job-duties">
+                <p class="title mc-c">工作职责</p>
+                <p>负责游戏官方网站的各类应用开发、运营</p>
+                <p>负责游戏官方网站的各类应用开发、运营</p>
+                <p>负责游戏官方网站的各类应用开发、运营</p>
+                <p>负责游戏官方网站的各类应用开发、运营</p>
+            </div>
+            <div class="job-require">
+                <p class="title mc-c">工作要求</p>
+                <p>1、本科以上学历，计算机软件及相关专业1、本科以上学历，计算机软件及相关专业1、本科以上学历，计算机软件及相关专业1、本科以上学历，计算机软件及相关专业1、本科以上学历，计算机软件及相关专业</p>
+                <p>2、三年级以上开发工作经验</p>
+                <p>3、负责游戏官方网站的各类应用开发、运营</p>
+                <p>1、本科以上学历，计算机软件及相关专业</p>
+                <p>2、三年级以上开发工作经验</p>
+                <p>3、负责游戏官方网站的各类应用开发、运营</p>
+            </div>
+        </div>
+    </div>
+    <!-- 提示信息 -->
+    <div id="tipsDiv" style="display: none">
+        <div class="login-main">
+            <img src="images/z-goout.png" alt="">
+            <p class="goOutHint"></p>
+            <span class="changePassSpan">我知道了！</span>
+        </div>
+    </div>
+    <!-- 是否取消收藏职位 -->
+    <div id="deleteFavorate" style="display: none">
+        <div class="login-main">
+            <img src="images/z-goout.png" alt="">
+            <p class="goOutHint">确定取消收藏该职位嘛？</p>
+            <button class="button button--winona button--winonaa register-btn zhuce bgc2b60ab cursor" data-text="确定" onclick="javascript:ajaxDeleteFavorate();">
+                <span>确定</span>
+            </button>
+        </div>
+    </div>
+    <!--去登录  -->
+    <div id="loginOrNot" style="display: none">
+        <div class="login-main">
+            <img src="images/z-goout.png" alt="">
+            <p class="goOutHint"></p>
+            <button class="button button--winona button--winonaa register-btn zhuce bgc2b60ab cursor" data-text="去登录" onclick="javascript:loginLayShow();">
+                <span>去登录</span>
+            </button>
+        </div>
+    </div>
+
+    <!--社会简历不能投递校园简历  -->
+    <div id="socialNotcampus" style="display: none;">
+        <div class="login-main">
+            <img src="images/z-goout.png" alt="">
+            <p class="goOutHint">注册为社会招聘的用户不能应聘校园招聘的职位。</p>
+            <span class="changePassSpan">我知道了！</span>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+<script>
+    layui.use('layer', function() {
+        var $ = layui.jquery,
+            layer = layui.layer;
+        $("#newResume").on("click", uploadResumeShow);
+        $("#goOutshow").on("click", goOutShow);
+        $("#deleteResume").on("click", deleteResumeShow);
+        $("#changePassShow").on("click", changePassShow);
+
+
+        $("#changePassSuShow").on("click", changePassSuShow);
+        $("#findPassShow2").on("click", findPassShow2);
+        $("#registerSuccessShow").on("click", registerSuccessShow);
+        $("#positionShow").on("click", positionShow);
+
+        $("#tipsShow").on("click", tipsDivShow);
+        $("#deleteFavorateShow").on("click", deleteFavorateShow);
+        $("#isLogin").on("click", isLoginShow);
+
+        $("#socialNotcampusshow").on("click", socialNotcampus);
+    });
+    //<!-- 新建简历 -->
+    function uploadResumeShow() {
+        var uploadResumeStr = $("#uploadResume").html();
+        layer.open({
+            type: 1,
+            title: '上传简历',
+            area: ['530px', 'auto'],
+            offset: '15%',
+            content: uploadResumeStr
+        });
+        $(".layui-layer").ready(function() {
+            $(".layui-layer .uploadResumeNot").on("click", function() {
+                layer.closeAll();
+            });
+            $(".layui-layer .uploadResume").on("click", function() {
+                creatNewRsume(1);
+            });
+        });
+    }
+    //<!-- 退出登陆 -->
+    function goOutShow() {
+        var goOutStr = $("#goOut").html();
+        layer.open({
+            type: 1,
+            title: '确定退出',
+            area: ['420px', 'auto'],
+            offset: '15%',
+            content: goOutStr
+        });
+    }
+    //<!-- 删除简历 -->
+    function deleteResumeShow() {
+        var resumeName = $("#deleteResumeComfirm .resume-name").val();
+        $("#deleteResumeComfirm .goOutHint").text("该操作会导致名为【" + resumeName + "】的简历均被删除，是否继续操作？");
+        var goOutStr = $("#deleteResumeComfirm").html();
+        layer.open({
+            type: 1,
+            title: '提示',
+            area: ['420px', 'auto'],
+            offset: '15%',
+            content: goOutStr
+        });
+    }
+    //<!-- 找回密码 -->
+    function findPassShow2() {
+        var findPass2Str = $("#findPass2").html();
+        layer.open({
+            type: 1,
+            title: '去邮箱设置新密码',
+            area: ['420px', 'auto'],
+            offset: '15%',
+            content: findPass2Str
+        });
+        $('.layui-layer-title').css('display', 'none');
+        $(".layui-layer").ready(function() {
+            $(".layui-layer .changePassSpan").on("click", function() {
+                layer.closeAll();
+            });
+        });
+    }
+    //
+    function changePassShow() {
+        $(".noFindEmail").hide();
+        $(".userErrorCode").hide();
+        var changePassStr = $("#changePass").html();
+        layer.open({
+            type: 1,
+            title: '修改密码',
+            area: ['420px', 'auto'],
+            offset: '15%',
+            content: changePassStr
+        });
+        $('.layui-layer-title').css('display', 'none');
+        $(".layui-layer").ready(function() {
+            changePassword();
+        });
+    }
+    //<!--注册成功 -->
+    function registerSuccessShow() {
+        var registerSuccessStr = $("#registerSuccess").html();
+        layer.open({
+            time: 5000,
+            type: 1,
+            title: '注册成功',
+            area: ['420px', 'auto'],
+            offset: '15%',
+            content: registerSuccessStr,
+            end: function() { //此处用于演示
+                //window.location.href='http://www.catlbattery.com/';
+            }
+        });
+        $('.layui-layer-title').css('display', 'none');
+    }
+    //<!-- 职位 -->
+    function positionShow() {
+        var positionStr = $("#position").html();
+        layer.open({
+            type: 1,
+            title: '职位详情',
+            area: ['670px', 'auto'],
+            content: positionStr
+        });
+        $('.layui-layer-title').css('display', 'none');
+    }
+
+    //提示信息
+    function tipsDivShow() {
+        var tipsDivStr = $("#tipsDiv").html();
+        layer.open({
+            type: 1,
+            title: '提示',
+            area: ['420px', 'auto'],
+            offset: '15%',
+            content: tipsDivStr
+        });
+        $(".layui-layer").ready(function() {
+            $(".layui-layer .changePassSpan").on("click", function() {
+                layer.closeAll();
+            });
+        });
+    }
+    //<!-- 是否取消收藏职位 -->
+    function deleteFavorateShow() {
+        var goOutStr = $("#deleteFavorate").html();
+        layer.open({
+            type: 1,
+            title: '提示',
+            area: ['420px', 'auto'],
+            offset: '15%',
+            content: goOutStr
+        });
+    }
+    //去登录
+    function isLoginShow() {
+        var goOutStr = $("#loginOrNot").html();
+        layer.open({
+            type: 1,
+            title: '提示',
+            area: ['420px', 'auto'],
+            offset: '15%',
+            content: goOutStr
+        });
+    }
+    //<!--社会简历不能投递校园简历  -->
+    function socialNotcampus() {
+        var socialNotcampusStr = $("#socialNotcampus").html();
+        layer.open({
+            type: 1,
+            title: '提示',
+            area: ['420px', 'auto'],
+            offset: '15%',
+            content: socialNotcampusStr
+        });
+    }
+</script>
+
+</html>

@@ -1,0 +1,175 @@
+.rc-box-1 {
+    width: 900px;
+    margin: 0 auto;
+    padding: 40px
+}
+
+.rc-box-2 {
+    width: 900px;
+    margin: 0 auto 40px;
+    padding: 10px;
+    background: #ffffff;
+}
+
+.rc-box-3 {
+    background: #ffffff;
+    border-top: 1px solid #eeeeee;
+}
+
+.rc-box-3 .wrapper {
+    width: 900px;
+    margin: 0 auto 40px;
+    padding: 10px;
+}
+
+.rc-box-4 {
+    width: 900px;
+    margin: 0 auto 20px;
+    padding: 10px;
+}
+
+.rc-search {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 32px;
+    border: 1px solid #1b5ba9;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.rc-search input {
+    height: 30px;
+    outline: none;
+    width: 100%;
+    text-indent: 10px;
+}
+
+.rc-search i {
+    height: 30px;
+    width: 30px;
+    background-color: #1b5ba9;
+    background-image: url("../images/sc-search-icon.png");
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.pos-tip {
+    color: #1b5ba9;
+    font-size: 20px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+ul.pos-detail {
+    width: 100%;
+    font-size: 0;
+    margin-bottom: 20px;
+}
+
+ul.pos-detail li {
+    width: 33%;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.pos-table-tip {
+    font-size: 14px;
+}
+
+.pos-table-subTip {
+    font-size: 12px;
+    color: #adadad;
+}
+
+table.pos-table {
+    width: 100%;
+    margin: 10px 0 20px;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+table.pos-table td {
+    text-align: center;
+    line-height: 28px;
+}
+
+table.pos-table tr {
+    margin: 10px 0;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.pos-table-header {
+    width: 26px;
+    background: #dce9f6;
+}
+
+.pos-table-tag {
+    height: 25px;
+    width: 66px;
+    line-height: 25px;
+    margin-left: 10px;
+    padding: 0 5px;
+    font-size: 12px;
+    display: inline-block;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+    opacity: .9;
+    border-radius: 100px;
+    background: #ff9f15;
+}
+
+.pos-table-mark {
+    width: 60px;
+}
+
+.pos-table-mark.selected i {
+    width: 30px;
+    height: 21px;
+    display: inline-block;
+    background: url("../images/pos-selected.png");
+    vertical-align: middle;
+}
+
+.table-oper {
+    color: #1b5ba9;
+    margin-right: 6px;
+}
+
+.centerBtn {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.lookMore {
+    display: inline-block;
+    width: 164px;
+    height: 44px;
+    line-height: 44px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #1b5ba9;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media screen and (min-width:1600px) {
+    .rc-box-1 {
+        width: 1200px;
+    }
+    .rc-box-2 {
+        width: 1200px;
+    }
+    .rc-box-3 .wrapper {
+        width: 1200px;
+    }
+    .rc-box-4 {
+        width: 1200px;
+    }
+}

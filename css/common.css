@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft Yahei"
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+h1,
+.h1 {
+    font-size: 36px;
+}
+
+h2,
+.h2 {
+    font-size: 30px;
+}
+
+h3,
+.h3 {
+    font-size: 24px;
+}
+
+h4,
+.h4 {
+    font-size: 18px;
+}
+
+h5,
+.h5 {
+    font-size: 14px;
+}
+
+h6,
+.h6 {
+    font-size: 12px;
+}
+
+q:before,
+q:after {
+    content: ' '
+}
+
+abbr,
+acronym {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.bc {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clearfix:after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+.clearfix {
+    display: inline-block;
+    clear: both;
+}
+
+*html .clearfix {
+    height: 1%;
+}
+
+iframe {
+    display: block;
+}
+
+.Clearfix {
+    display: block;
+}
+
+.cb {
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    height: 0;
+    visibility: both;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+    /* IE/7/6*/
+}
+
+html,
+body {
+    width: 100%;
+    font-size: 14px;
+    color: #666666;
+}
+
+
+/***** header *****/
+
+.header {
+    width: 1200px;
+    height: 65px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.header-logo {
+    float: left;
+    padding: 2px 40px 0 0;
+}
+
+.header-logo img {
+    height: 58px;
+}
+
+.header-menu {
+    float: left;
+    height: 100%;
+}
+
+.header-menu>ul>li {
+    width: 90px;
+    height: 100%;
+    float: left;
+    line-height: 65px;
+    text-align: center;
+    position: relative;
+}
+
+.header-menu>ul>li>a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #2a2a38;
+}
+
+.header-menu>ul>li>a.hover,
+.header-menu>ul>li>a:hover {
+    background-color: #004098;
+    color: #fff;
+}
+
+.header-menu>ul>li .menuTwo {
+    width: 90px;
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    top: 65px;
+    z-index: 2;
+}
+
+.header-menu>ul>li .menuTwo li {
+    border-bottom: 1px solid #e7eff4;
+    line-height: 45px;
+}
+
+.header-menu>ul>li .menuTwo li a {
+    display: block;
+    color: #2a2a38;
+    width: 100%;
+    height: 100%;
+}
+
+.header-menu>ul>li:hover ul.menuTwo {
+    display: block;
+}
+
+.header-menu>ul>li .menuTwo li a:hover {
+    background-color: #004098;
+    color: #fff;
+}
+
+.header-login {
+    margin-top: 2px;
+    float: right;
+}
+
+.header-login a {
+    display: block;
+    float: left;
+    color: #2a2a38;
+    margin: 20px 0 0 25px;
+}
+
+.header-login a img {
+    vertical-align: middle;
+    margin: -3px 5px 0 0;
+}
+
+
+/**** banner *****/
+
+.banner {
+    width: 100%;
+    height: 322px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/**** �������ʽ *****/
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.moduleName {
+    padding: 50px 0;
+    /* color: #004098; */
+    text-align: center;
+}
+
+.moduleName p {
+    font-size: 23px;
+}
+
+.moduleName i {
+    display: block;
+    width: 50px;
+    height: 1px;
+    border-bottom: 1px solid #e1e1e1;
+    margin: 15px auto;
+}
+
+.moduleName span {
+    font-size: 14px;
+}
+
+
+/***** footer *****/
+
+.footer1 {
+    height: 45px;
+    line-height: 45px;
+    clear: both;
+    text-align: center;
+    color: #3e3e3e;
+    background-color: #fff;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    clear: both;
+    text-align: center;
+    color: #3e3e3e;
+    background-color: #fff;
+}
+
+fieldset {
+    box-sizing: border-box;
+    padding: 10px;
+    /* margin: 10px; */
+    width: 100%;
+    color: #333;
+    border: #f5e49e solid 1px;
+    border-radius: 5px;
+}
+
+legend {
+    color: #4974a9;
+    font-weight: 800;
+    background: #fff;
+}

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="../css/common.css" charset="utf-8">
+    <link rel="stylesheet" href="../css/personalCenter.css" charset="utf-8">
+    <link rel="stylesheet" href="../css/fonts/iconfont.css">
+    <link rel="stylesheet" href="../css/iconfonts/iconfont.css">
+
+
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-logo"><img src="../images/logo.png" alt="" /></div>
+        <div class="header-menu">
+            <ul>
+                <li><a class="hover" href="../index.html">首页</a></li>
+                <li><a href="../aboutus/aboutus.html">关于我们</a></li>
+                <li><a href="../news/news.html">新闻动态</a></li>
+                <li><a href="../social/social.html">社会招聘</a>
+                    <ul class="menuTwo">
+                        <li><a href="../social/socialstation.html">招聘岗位</a></li>
+                        <li><a href="../social/socialflow.html">招聘流程</a></li>
+                        <li><a href="../social/socialquestion.html">常见问题</a></li>
+                    </ul>
+                </li>
+                <li><a href="../campus/campus.html">校园招聘</a>
+                    <ul class="menuTwo">
+                        <li><a href="../campus/campusstation.html">招聘岗位</a></li>
+                        <li><a href="../campus/campusflow.html">招聘流程</a></li>
+                        <li><a href="../campus/campusquestion.html">常见问题</a></li>
+                    </ul>
+                </li>
+                <li><a href="../talent/talent.html">人才库</a></li>
+            </ul>
+        </div>
+        <div class="header-login">
+            <ul>
+                <li>
+                    <a href="javascript:void(0);" class="userCenter">
+                        <div></div>
+                        <span onclick="gotoUserCenter();">个人中心</span>
+                    </a>
+                </li>
+                <li>
+                    <div class="for_userCenter" style="display: none;">
+                        <div class="changepassword" onclick="changePassShow()">修改密码</div>
+                        <div id="goOutShow" class="logout">注销</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="middle_block">
+        <div class="container">
+            <div class="left_side">
+                <ul class="left_nav">
+                    <li class="person_info">
+                        <div></div>
+                        <span class="user_name">980583728@qq.com</span>
+                        <!-- <p class="edit_avatar">编辑头像</p> -->
+                    </li>
+                    <li class="my_application" style="color:#2b60ab;">
+                        <i class="icon iconfont">&#xe680;</i>
+                        <p>我的应聘</p>
+                    </li>
+                    <li class="my_resume">
+                        <i class="icon iconfont">&#xe605;</i>
+                        <p>我的简历</p>
+                    </li>
+                    <li class="my_collection">
+                        <i class="icon iconfont">&#xe60b;</i>
+                        <p>我的收藏</p>
+                    </li>
+
+                    <li class="weixinhao">
+                        <img src="../images/weixinhao.png" alt="">
+                        <p>国家外汇招聘公众号</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="right_side">
+                <p class="right_title">我的应聘</p>
+                <div class="right_content">
+                    <!-- change sections here -->
+                    <div class="for_my_application" style="display:block;">
+                        <ul>
+                            <li class="application_table_title">
+                                <div class="application_time">投递时间</div>
+                                <div class="application_recruitment">投递岗位</div>
+                                <div class="job_address">工作地</div>
+                                <div class="application_resume">申请简历</div>
+                                <div class="application_situation">应聘情况</div>
+                            </li>
+                            <li class="application_table_content">
+                                <div class="application_time_desc">2016-04-13</div>
+                                <div class="application_recruitment_desc"><a href="javascript:void(0);" onclick="showDetails();">互联网产品部-产品经理 <img src="../images/jt-right.png" alt=""></a></div>
+                                <div class="job_address_desc">上海</div>
+                                <div class="application_resume_desc">【社会】我的简历</div>
+                                <div class="application_situation_desc"><span>待处理<img src="../images/jt-bottom2.png" alt=""></span></div>
+                                <div class="red_tips">第一志愿</div>
+                                <div class="for_application_situation" style="display:none;">
+                                    <div class="progressbar">
+                                        <ul>
+                                            <li class="progress_begin">
+                                                <div></div>
+                                                <p>投递简历</p>
+                                            </li>
+                                            <li>
+                                                <div></div>
+                                                <p>待处理</p>
+                                            </li>
+                                            <li>
+                                                <div></div>
+                                                <p>复筛</p>
+                                            </li>
+                                            <li>
+                                                <div></div>
+                                                <p>一面</p>
+                                            </li>
+                                            <li>
+                                                <div></div>
+                                                <p>二面</p>
+                                            </li>
+                                            <li>
+                                                <div></div>
+                                                <p>入职</p>
+                                            </li>
+                                        </ul>
+                                        <span class="progress_time1">2016-03-13</span>
+                                        <span class="progress_time2">03-14</span>
+                                        <span class="progress_time3">03-15</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="flip">
+                            <a href="">首页</a>
+                            <a href="">上一页</a>
+                            <a class="hover" href="">1</a>
+                            <a href="">2</a>
+                            <a href="">3</a>
+                            <a href="">4</a>
+                            <a href="">下一页</a>
+                            <a href="">尾页</a>
+
+                        </div>
+                    </div>
+                    <div class="for_my_resume" style="display:none;">
+                        <!-- 存在简历的时候 -->
+                        <div class="exist_resume" style="position:relative;width:100%;height:100%;display:block;">
+                            <ul>
+                                <li>
+                                    <div class="recruit_type">社招</div>
+                                    <div class="resume_info">
+                                        <span class="resume_name">李氏眼的简历1</span>
+                                        <span class="is_complete">不完整</span>
+                                        <div class="resume_edit">
+                                            <a style="display: none;">
+                                                <span><i class="icon iconfont">&#xe61b;</i>编辑</span>
+                                                <span class="delete"><i class="icon iconfont">&#xe61c;</i>删除</span>
+                                                <span><i class="icon iconfont">&#xe681;</i>预览</span>
+                                            </a>
+                                        </div>
+                                        <div class="resume_type">【中文简历】</div>
+                                        <div class="resume_create_time">2016-11-12创建</div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="flip">
+                                <a href="">首页</a>
+                                <a href="">上一页</a>
+                                <a class="hover" href="">1</a>
+                                <a href="">2</a>
+                                <a href="">3</a>
+                                <a href="">4</a>
+                                <a href="">下一页</a>
+                                <a href="">尾页</a>
+
+                            </div>
+                        </div>
+                        <!-- 不存在简历的时候 -->
+                        <div class="non-existent_resume" style="position:relative;width:100%;height:100%;display:none;">
+                            <img width="400" src="../images/resume_state.png" alt="">
+                            <p>这里空空如也，赶快开始职业新路程~</p>
+                            <div class="create_resume">新建简历</div>
+                        </div>
+                    </div>
+                    <div class="for_my_collection" style="display:none;">
+                        <table class="list-table-std" width="100%">
+                            <tr>
+                                <th width="30"></th>
+                                <th>职位名称</th>
+                                <th>招聘类别</th>
+                                <th>工作地点</th>
+                                <th>招聘人数</th>
+                                <th></th>
+                            </tr>
+                            <tr class="clickHot">
+                                <td><span class="firemark"></span></td>
+                                <td>销售工程师（储能）</td>
+                                <td>销售类别</td>
+                                <td>工作地点</td>
+                                <td>招聘人数</td>
+                                <td><span class="arrow-grey hand"></span></td>
+                            </tr>
+                            <tr class="hideTR">
+                                <td colspan="99">
+                                    <div class="content-layout-1">
+                                        <dl>
+                                            <dt>工作职责</dt>
+                                            <dd>1.负责开发国内储能系统业务市场的行业客户和项目</dd>
+                                            <dd>2.负责管理和支持国内储能系统行业的渠道合作伙伴，与之建立并保持</dd>
+                                            <dd>3.负责管理和支持国内储能系统行业的渠道合作伙伴，与之建立并保持</dd>
+                                            <dd>4.负责管理和支持国内储能系统行业的渠道合作伙伴，与之建立并保持</dd>
+                                        </dl>
+                                        <dl class="mt10">
+                                            <dt>工作需求</dt>
+                                            <dd>1.负责开发国内储能系统业务市场的行业客户和项目</dd>
+                                            <dd>2.负责管理和支持国内储能系统行业的渠道合作伙伴，与之建立并保持</dd>
+                                        </dl>
+                                        <dl class="mt10">
+                                            <dt>招聘类型</dt>
+                                            <dd>全职</dd>
+                                        </dl>
+                                        <div class="bub">
+                                            <span class="pub-button-small style_red"><i class="icon iconfont" style="margin-right:4px;">&#xe647;</i>申请职位</span>
+                                            <span class="pub-button-small style_lightred ml10"><i class="icon iconfont" style="margin-right:4px;">&#xe60b;</i>收藏职位</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="clickHot">
+                                <td><span class="firemark"></span></td>
+                                <td>销售工程师（储能）</td>
+                                <td>销售类别</td>
+                                <td>工作地点</td>
+                                <td>招聘人数</td>
+                                <td><span class="arrow-grey hand"></span></td>
+                            </tr>
+                            <tr class="hideTR">
+                                <td colspan="99">
+                                    <div class="content-layout-1">
+                                        <dl>
+                                            <dt>工作职责</dt>
+                                            <dd>1.负责开发国内储能系统业务市场的行业客户和项目</dd>
+                                            <dd>2.负责管理和支持国内储能系统行业的渠道合作伙伴，与之建立并保持</dd>
+                                            <dd>3.负责管理和支持国内储能系统行业的渠道合作伙伴，与之建立并保持</dd>
+                                            <dd>4.负责管理和支持国内储能系统行业的渠道合作伙伴，与之建立并保持</dd>
+                                        </dl>
+                                        <dl class="mt10">
+                                            <dt>工作需求</dt>
+                                            <dd>1.负责开发国内储能系统业务市场的行业客户和项目</dd>
+                                            <dd>2.负责管理和支持国内储能系统行业的渠道合作伙伴，与之建立并保持</dd>
+                                        </dl>
+                                        <dl class="mt10">
+                                            <dt>招聘类型</dt>
+                                            <dd>全职</dd>
+                                        </dl>
+                                        <div class="bub">
+                                            <span class="pub-button-small style_red"><i class="icon iconfont" style="margin-right:4px;">&#xe647;</i>申请职位</span>
+                                            <span class="pub-button-small style_lightred ml10"><i class="icon iconfont" style="margin-right:4px;">&#xe60b;</i>收藏职位</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="clickHot">
+                                <td><span class="firemark"></span></td>
+                                <td>销售工程师（储能）</td>
+                                <td>销售类别</td>
+                                <td>工作地点</td>
+                                <td>招聘人数</td>
+                                <td><span class="arrow-grey hand"></span></td>
+                            </tr>
+                            <tr class="hideTR">
+                                <td colspan="99">
+                                    <div class="content-layout-1">
+                                        <dl>
+                                            <dt>工作职责</dt>
+                                            <dd>1.负责开发国内储能系统业务市场的行业客户和项目</dd>
+                                            <dd>2.负责管理和支持国内储能系统行业的渠道合作伙伴，与之建立并保持</dd>
+                                            <dd>3.负责管理和支持国内储能系统行业的渠道合作伙伴，与之建立并保持</dd>
+                                            <dd>4.负责管理和支持国内储能系统行业的渠道合作伙伴，与之建立并保持</dd>
+                                        </dl>
+                                        <dl class="mt10">
+                                            <dt>工作需求</dt>
+                                            <dd>1.负责开发国内储能系统业务市场的行业客户和项目</dd>
+                                            <dd>2.负责管理和支持国内储能系统行业的渠道合作伙伴，与之建立并保持</dd>
+                                        </dl>
+                                        <dl class="mt10">
+                                            <dt>招聘类型</dt>
+                                            <dd>全职</dd>
+                                        </dl>
+                                        <div class="bub">
+                                            <span class="pub-button-small style_red"><i class="icon iconfont" style="margin-right:4px;">&#xe647;</i>申请职位</span>
+                                            <span class="pub-button-small style_lightred ml10"><i class="icon iconfont" style="margin-right:4px;">&#xe60b;</i>收藏职位</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="clickHot">
+                                <td><span class="firemark"></span></td>
+                                <td>销售工程师（储能）</td>
+                                <td>销售类别</td>
+                                <td>工作地点</td>
+                                <td>招聘人数</td>
+                                <td><span class="arrow-grey hand"></span></td>
+                            </tr>
+                            <tr class="hideTR">
+                                <td colspan="99">
+                                    <div class="content-layout-1">
+                                        <dl>
+                                            <dt>工作职责</dt>
+                                            <dd>1.负责开发国内储能系统业务市场的行业客户和项目</dd>
+                                            <dd>2.负责管理和支持国内储能系统行业的渠道合作伙伴，与之建立并保持</dd>
+                                            <dd>3.负责管理和支持国内储能系统行业的渠道合作伙伴，与之建立并保持</dd>
+                                            <dd>4.负责管理和支持国内储能系统行业的渠道合作伙伴，与之建立并保持</dd>
+                                        </dl>
+                                        <dl class="mt10">
+                                            <dt>工作需求</dt>
+                                            <dd>1.负责开发国内储能系统业务市场的行业客户和项目</dd>
+                                            <dd>2.负责管理和支持国内储能系统行业的渠道合作伙伴，与之建立并保持</dd>
+                                        </dl>
+                                        <dl class="mt10">
+                                            <dt>招聘类型</dt>
+                                            <dd>全职</dd>
+                                        </dl>
+                                        <div class="bub">
+                                            <span class="pub-button-small style_red"><i class="icon iconfont" style="margin-right:4px;">&#xe647;</i>申请职位</span>
+                                            <span class="pub-button-small style_lightred ml10"><i class="icon iconfont" style="margin-right:4px;">&#xe60b;</i>收藏职位</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer1">国家外汇管理局中央外汇业务中心©版</div>
+    <div class="mask" style="display:none;">
+        <div class="for_application_recruitment_desc">
+            <p class="recruitment_title">互联网产品部-产品经理<i class="icon iconfont">&#xe707;</i></p>
+            <i class="icon iconfont cancle">&#xe606;</i>
+            <ul class="detail">
+                <li class="work_place">工作地点：<span>上海</span></li>
+                <li class="position_type">职位类别：<span>技术类</span></li>
+                <li class="recruit_number">招聘人数：<span>2人</span></li>
+                <li class="recruit_institution">招聘机构：<span>上海分公司</span></li>
+            </ul>
+            <p class="work_duty_title">工作职责</p>
+            <ul class="work_duty">
+                <li>工作职责 负责游戏官方网站建设的各类应用的开发、运营；</li>
+                <li>负责在线活动、营销系统的开发、运营；</li>
+                <li>负责营销相关平台的开发。</li>
+            </ul>
+            <p class="work_require_title">工作要求</p>
+            <ul class="work_require">
+                <li>1、本科以上学历，计算机软件或相关专业； </li>
+                <li>2、3年及以上开发工作经验；</li>
+                <li>3、软件知识结构全面，基础扎实，精通常用数据结构与算法；</li>
+                <li>4、软件知识结构全面，基础扎实，精通常用数据结构与算法；</li>
+                <li>5、软件知识结构全面，基础扎实，精通常用数据结构与算法；</li>
+                <li>6、软件知识结构全面，基础扎实，精通常用数据结构与算法；软件知识结构全面，基础扎实，精通常用数据结构与算法；软件知识结构全面，基础扎实，精通常用数据结构与算法；软件知识结构全面，基础扎实，精通常用数据结构与算法；</li>
+                <li>7、软件知识结构全面，基础扎实，精通常用数据结构与算法；</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+
+<script>
+    // 我的应聘
+    $(".my_application").click(function() {
+        $(".for_my_resume").hide();
+        $(".for_my_collection").hide();
+
+        $(".for_my_application").show();
+
+        $(this).css('color', '#2b60ab');
+        $(".my_resume").css('color', '#666666');
+        $(".my_collection").css('color', '#666666');
+
+        $(".right_title").html($(this).find("p").html());
+    });
+    //我的简历
+    $(".my_resume").click(function() {
+        $(".for_my_collection").hide();
+        $(".for_my_application").hide();
+
+        $(".for_my_resume").show();
+        $(this).css('color', '#2b60ab');
+        $(".my_application").css('color', '#666666');
+        $(".my_collection").css('color', '#666666');
+
+        $(".right_title").html($(this).find("p").html());
+    });
+    //我的收藏
+    $(".my_collection").click(function() {
+        $(".for_my_resume").hide();
+        $(".for_my_application").hide();
+
+        $(".for_my_collection").show();
+        $(this).css('color', '#2b60ab');
+        $(".my_application").css('color', '#666666');
+        $(".my_resume").css('color', '#666666');
+
+        $(".right_title").html($(this).find("p").html());
+    });
+
+    $(".for_my_resume li").on('mouseover', function() {
+        $(this).find(".resume_edit a").show();
+    });
+    $(".for_my_resume li").on('mouseout', function() {
+        $(this).find(".resume_edit a").hide();
+    });
+
+    $(".delete").on("click", function() {
+        $(this).parents("li").remove();
+        if ($(".exist_resume").find("li").length > 0) {
+            $(".exist_resume").show();
+            $(".non-existent_resume").hide();
+        } else {
+            $(".exist_resume").hide();
+            $(".non-existent_resume").show();
+        }
+    });
+
+    $('.list-table-std .clickHot').on('click', function() {
+
+        var $this = $(this),
+            $hideTr = $this.next('.hideTR');
+
+        if ($this.hasClass('open1')) {
+            $this.removeClass('open1');
+            $hideTr.removeClass('open');
+        } else {
+            $this.addClass('open1');
+            $hideTr.addClass('open');
+        }
+    });
+    $(".application_situation_desc span").click(function() {
+        if ($(this).hasClass('cc')) {
+            $(this).removeClass('cc');
+            $(".for_application_situation").hide();
+            $(this).find('img').css('transform', 'rotate(0)');
+        } else {
+            $(this).addClass('cc');
+            $(".for_application_situation").show();
+            $(this).find('img').css('transform', 'rotate(180deg)');
+        }
+
+    });
+    // 此处是模拟后台获取到的待处理进度，假设为第四步进入了一面的情况
+    var step = 3;
+    // 方法一：
+    // var info = '.progressbar li:lt(' + step + ')';
+    // var lis = $(info);
+    // lis.addClass('completed');
+    // 方法二：
+    for (var i = 0; i < step; i++) {
+        $($(".progressbar li")[i]).addClass('completed');
+    }
+
+    function cl() {
+        if ($(".for_userCenter").css("display") == "none") {
+            $(".for_userCenter").css("display", "block");
+        } else {
+            $(".for_userCenter").css("display", "none");
+        }
+    }
+    var documentHeight = $(document).height();
+    console.log(documentHeight);
+    $(".mask").height(documentHeight);
+
+    function showDetails() {
+        $(".mask").show();
+    }
+    $(".cancle").click(function() {
+        $(".mask").hide();
+    });
+    $(document).click(function(event) {
+        var target = $(event.target);
+        if (target.is(".mask")) {
+            $(".mask").hide();
+        }
+    });
+
+
+
+
+
+
+
+
+    timerCL = [];
+    $('.userCenter').mouseenter(function() {
+        for (var each in timerCL) {
+            clearInterval(timerCL[each]);
+        }
+        $('.for_userCenter').show();
+    });
+    $('.userCenter').mouseout(function() {
+        timerCL.push(setTimeout("$('.for_userCenter').hide()", 1000));
+    });
+    $('.for_userCenter').mouseenter(function() {
+        for (var each in timerCL) {
+            clearInterval(timerCL[each]);
+        }
+        $('.for_userCenter').show();
+    });
+    $('.for_userCenter').mouseout(function() {
+        timerCL.push(setTimeout("$('.for_userCenter').hide()", 1000));
+    });
+</script>
+
+
+</html>
